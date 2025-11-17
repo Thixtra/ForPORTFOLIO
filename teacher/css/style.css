@@ -1,0 +1,164 @@
+/* Teacher CSS Styles */
+body {
+    font-family: 'Sarabun', sans-serif;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 0.75rem;
+    width: 90%;
+    max-width: 500px;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.report-container {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.school-header {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    margin: 20px 0;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.stats-table th, .stats-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.stats-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.student-list {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.absent-list { 
+    background-color: #fee2e2; 
+    border-left: 4px solid #dc2626; 
+}
+
+.leave-list { 
+    background-color: #dcfce7; 
+    border-left: 4px solid #16a34a; 
+}
+
+.late-list { 
+    background-color: #fef3c7; 
+    border-left: 4px solid #d97706; 
+}
+
+.list-header {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #374151;
+}
+
+.student-item {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.student-item:last-child {
+    border-bottom: none;
+}
+
+.no-data {
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* Attendance status colors */
+.status-present {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.status-absent {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.status-leave {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.status-late {
+    background-color: #fed7aa;
+    color: #ea580c;
+}
+
+.status-unchecked {
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .report-container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .school-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+} 
