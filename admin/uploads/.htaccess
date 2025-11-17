@@ -1,0 +1,16 @@
+# ป้องกันการเข้าถึงไฟล์โดยตรง
+Order Deny,Allow
+Deny from all
+
+# อนุญาตเฉพาะไฟล์ที่จำเป็น
+<Files "*.csv">
+    Allow from all
+</Files>
+
+<Files "*.xlsx">
+    Allow from all
+</Files>
+
+<Files "*.xls">
+    Allow from all
+</Files> 
